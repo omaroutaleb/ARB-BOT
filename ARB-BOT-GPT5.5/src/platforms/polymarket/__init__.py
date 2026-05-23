@@ -1,0 +1,2 @@
+"""Polymarket adapter."""
+

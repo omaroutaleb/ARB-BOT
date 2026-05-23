@@ -1,0 +1,26 @@
+services:
+  arbbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: arb-bot-cross:latest
+    container_name: arb-bot-cross
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "9090:9090"           # Prometheus metrics
+    volumes:
+      - ./state:/app/state    # Trade.json persists across container restarts
+    logging:
+      driver: json-file
+      options:
+        max-size: "20m"
+        max-file: "5"
+    stop_grace_period: 10s    # gives the kill switch time to cancel orders
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request,sys; sys.exit(0 if urllib.request.urlopen('http://localhost:9090/metrics',timeout=3).status==200 else 1)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s

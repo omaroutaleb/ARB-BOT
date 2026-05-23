@@ -1,0 +1,71 @@
+[project]
+name = "arb-bot-cross"
+version = "0.1.0"
+description = "Cross-platform crypto prediction-market arbitrage bot — Polymarket × Limitless Exchange"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+
+dependencies = [
+    # HTTP
+    "aiohttp>=3.9.5",
+    "httpx>=0.27.0",
+    # WebSockets
+    "websockets>=12.0",
+    "python-socketio[asyncio_client]>=5.11.0",
+    # Polymarket official SDK (CLOB V2 compatible)
+    "py-clob-client>=0.20.0",
+    # Ethereum signing / EIP-712
+    "web3>=6.15.0",
+    "eth-account>=0.11.0",
+    "eth-utils>=4.0.0",
+    "eth-abi>=5.0.0",
+    # Config / data
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "python-dotenv>=1.0.1",
+    # Observability
+    "structlog>=24.1.0",
+    "prometheus-client>=0.20.0",
+    # Utilities
+    "orjson>=3.9.15",
+    "tenacity>=8.2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.5",
+    "pytest-cov>=4.1.0",
+    "respx>=0.20.2",
+    "freezegun>=1.4.0",
+    "ruff>=0.3.0",
+    "mypy>=1.9.0",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --cov=src --cov-report=term-missing"
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "ASYNC"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = false

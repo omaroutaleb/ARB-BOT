@@ -1,0 +1,12 @@
+services:
+  arbitrage-bot:
+    build: .
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    environment:
+      TRADE_JOURNAL_PATH: /app/data/Trade.json
+    ports:
+      - "9091:9090"
