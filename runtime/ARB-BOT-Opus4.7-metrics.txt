@@ -1,0 +1,74 @@
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 2077.0
+python_gc_objects_collected_total{generation="1"} 609.0
+python_gc_objects_collected_total{generation="2"} 65.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 297.0
+python_gc_collections_total{generation="1"} 27.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="11",patchlevel="15",version="3.11.15"} 1.0
+# HELP process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE process_virtual_memory_bytes gauge
+process_virtual_memory_bytes 3.0687232e+08
+# HELP process_resident_memory_bytes Resident memory size in bytes.
+# TYPE process_resident_memory_bytes gauge
+process_resident_memory_bytes 6.2988288e+07
+# HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE process_start_time_seconds gauge
+process_start_time_seconds 1.77953566705e+09
+# HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE process_cpu_seconds_total counter
+process_cpu_seconds_total 4.32
+# HELP process_open_fds Number of open file descriptors.
+# TYPE process_open_fds gauge
+process_open_fds 10.0
+# HELP process_max_fds Maximum number of open file descriptors.
+# TYPE process_max_fds gauge
+process_max_fds 1024.0
+# HELP arbbot_orders_submitted_total Orders submitted
+# TYPE arbbot_orders_submitted_total counter
+# HELP arbbot_orders_filled_total Orders that received any fill
+# TYPE arbbot_orders_filled_total counter
+# HELP arbbot_orders_cancelled_total Orders cancelled
+# TYPE arbbot_orders_cancelled_total counter
+# HELP arbbot_orders_rejected_total Orders rejected by the venue
+# TYPE arbbot_orders_rejected_total counter
+# HELP arbbot_ws_reconnects_total WebSocket reconnect events
+# TYPE arbbot_ws_reconnects_total counter
+# HELP arbbot_heartbeats_sent_total Polymarket heartbeats sent
+# TYPE arbbot_heartbeats_sent_total counter
+arbbot_heartbeats_sent_total 0.0
+# HELP arbbot_heartbeats_sent_created Polymarket heartbeats sent
+# TYPE arbbot_heartbeats_sent_created gauge
+arbbot_heartbeats_sent_created 1.7795356687748742e+09
+# HELP arbbot_orphan_legs_total Hedge legs that failed to fill
+# TYPE arbbot_orphan_legs_total counter
+# HELP arbbot_kill_switch_triggers_total Kill switch activations
+# TYPE arbbot_kill_switch_triggers_total counter
+# HELP arbbot_open_positions Currently open positions
+# TYPE arbbot_open_positions gauge
+# HELP arbbot_bankroll_usd Current bankroll in USD
+# TYPE arbbot_bankroll_usd gauge
+arbbot_bankroll_usd 500.0
+# HELP arbbot_equity_usd Current equity (cash + open position MTM) in USD
+# TYPE arbbot_equity_usd gauge
+arbbot_equity_usd 500.0
+# HELP arbbot_drawdown_usd Drawdown from peak equity in USD
+# TYPE arbbot_drawdown_usd gauge
+arbbot_drawdown_usd 0.0
+# HELP arbbot_strategy_phase Active strategy phase (1, 2, or 3)
+# TYPE arbbot_strategy_phase gauge
+arbbot_strategy_phase 1.0
+# HELP arbbot_order_latency_seconds Order submission round-trip latency
+# TYPE arbbot_order_latency_seconds histogram
+# HELP arbbot_ws_message_lag_seconds Wall-clock lag between event timestamp and local receive (best-effort)
+# TYPE arbbot_ws_message_lag_seconds histogram

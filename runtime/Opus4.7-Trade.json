@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "stats": {
+    "closed_arbs": 0,
+    "net_profitable_arbs": 0,
+    "orphan_incidents": 0,
+    "maker_fills_polymarket": 0
+  },
+  "bankroll": {
+    "bankroll_usd": 500.0,
+    "equity_usd": 500.0,
+    "daily_pnl_usd": 0.0,
+    "cumulative_pnl_usd": 0.0,
+    "peak_equity_usd": 500.0,
+    "updated_at_utc": "2026-05-23T00:43:57.985452+00:00"
+  },
+  "arbs": {},
+  "discovered_min_sizes": {}
+}
