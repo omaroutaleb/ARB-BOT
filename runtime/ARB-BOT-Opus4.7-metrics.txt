@@ -1,8 +1,8 @@
 # HELP python_gc_objects_collected_total Objects collected during gc
 # TYPE python_gc_objects_collected_total counter
 python_gc_objects_collected_total{generation="0"} 2077.0
-python_gc_objects_collected_total{generation="1"} 4413.0
-python_gc_objects_collected_total{generation="2"} 701.0
+python_gc_objects_collected_total{generation="1"} 4763.0
+python_gc_objects_collected_total{generation="2"} 901.0
 # HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
 # TYPE python_gc_objects_uncollectable_total counter
 python_gc_objects_uncollectable_total{generation="0"} 0.0
@@ -10,9 +10,9 @@ python_gc_objects_uncollectable_total{generation="1"} 0.0
 python_gc_objects_uncollectable_total{generation="2"} 0.0
 # HELP python_gc_collections_total Number of times this generation was collected
 # TYPE python_gc_collections_total counter
-python_gc_collections_total{generation="0"} 1924.0
-python_gc_collections_total{generation="1"} 174.0
-python_gc_collections_total{generation="2"} 4.0
+python_gc_collections_total{generation="0"} 2077.0
+python_gc_collections_total{generation="1"} 188.0
+python_gc_collections_total{generation="2"} 5.0
 # HELP python_info Python platform information
 # TYPE python_info gauge
 python_info{implementation="CPython",major="3",minor="11",patchlevel="15",version="3.11.15"} 1.0
@@ -21,13 +21,13 @@ python_info{implementation="CPython",major="3",minor="11",patchlevel="15",versio
 process_virtual_memory_bytes 3.0769152e+08
 # HELP process_resident_memory_bytes Resident memory size in bytes.
 # TYPE process_resident_memory_bytes gauge
-process_resident_memory_bytes 6.3901696e+07
+process_resident_memory_bytes 6.4032768e+07
 # HELP process_start_time_seconds Start time of the process since unix epoch in seconds.
 # TYPE process_start_time_seconds gauge
 process_start_time_seconds 1.77958327362e+09
 # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
 # TYPE process_cpu_seconds_total counter
-process_cpu_seconds_total 62.05
+process_cpu_seconds_total 67.57
 # HELP process_open_fds Number of open file descriptors.
 # TYPE process_open_fds gauge
 process_open_fds 10.0
