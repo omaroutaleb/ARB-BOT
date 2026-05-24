@@ -69,6 +69,7 @@ INSERT INTO reconciliations VALUES(23,'all',0,'{"dry_run": true}','2026-05-23T11
 INSERT INTO reconciliations VALUES(24,'all',0,'{"dry_run": true}','2026-05-23T11:22:42.930347+00:00');
 INSERT INTO reconciliations VALUES(25,'all',0,'{"dry_run": true}','2026-05-23T11:23:51.719986+00:00');
 INSERT INTO reconciliations VALUES(26,'all',0,'{"dry_run": true}','2026-05-23T11:24:25.098986+00:00');
+INSERT INTO reconciliations VALUES(27,'all',0,'{"dry_run": true}','2026-05-24T00:42:08.006245+00:00');
 DELETE FROM sqlite_sequence;
-INSERT INTO sqlite_sequence VALUES('reconciliations',26);
+INSERT INTO sqlite_sequence VALUES('reconciliations',27);
 COMMIT;
