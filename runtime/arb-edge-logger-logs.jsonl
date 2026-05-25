@@ -1,0 +1,182 @@
+[entrypoint] running self-test first
+
+=== walk_asks: single level, partial fill ===
+  ok  filled_shares: 200.0
+  ok  avg_price: 0.5
+  ok  depth_exhausted: False
+
+=== walk_asks: walks through two levels, weighted average ===
+  ok  filled_shares: 220.0
+  ok  filled_usd: 100.0
+  ok  avg_price: 0.45454545454545453
+  ok  depth_exhausted: False
+
+=== walk_asks: depth exhausted, flagged ===
+  ok  filled_shares: 100.0
+  ok  filled_usd: 40.0
+  ok  avg_price: 0.4
+  ok  depth_exhausted: True
+
+=== walk_asks: empty book ===
+  ok  filled_shares: 0.0
+  ok  avg_price: None
+  ok  depth_exhausted: True
+
+=== walk_asks: rejects unsorted input (catches programmer error) ===
+  ok  raised ValueError on misordered input
+
+=== walk_bids: descending, partial fill ===
+  ok  filled_shares: 190.0
+  ok  filled_usd: 100.0
+  ok  avg_price: 0.5263157894736842
+
+=== walk_asks: skips zero-price and zero-size levels (defensive) ===
+  ok  filled_shares: 200.0
+  ok  avg_price: 0.5
+
+=== limitless fee: prefers market metadata over fallback curve ===
+  ok  fee_usd: 1.0
+
+=== limitless fallback: buy fee peaks at p=0.50 -> ~3.00% of notional ===
+  ok  fee_usd (peak): 3.0
+
+=== limitless fallback: buy fee at edge p=0.01 -> ~0.40% ===
+  ok  fee_usd (edge): 0.45199999999999996
+
+=== polymarket fee: uses fd.rate if provided ===
+  ok  fee_usd: 0.375
+
+=== polymarket fee: fallback to crypto category (0.072 rate) ===
+  ok  fee_usd: 0.8999999999999999
+
+=== yes+no: NO edge when realistic sum_asks > 1.00 ===
+  ok  realistic_sum_avg_asks: 1.1
+  ok  net_edge_usd negative: True
+  ok  depth_ok: True
+
+=== yes+no: CLEAR edge when realistic sum_asks << 1.00 ===
+  ok  realistic_sum_avg_asks: 0.8
+  ok  net_edge_usd positive: True
+      [info] net_edge_usd = 22.5200, fees = 2.4800
+
+=== yes+no: depth exhausted on one side -> depth_ok=False ===
+  ok  yes_walk depth_exhausted: True
+  ok  depth_ok: False
+  ok  net_edge_usd is computed: True
+
+=== yes+no: walked avg price > top-of-book when book is layered (fake edge detection) ===
+  ok  naive_sum_top_asks: 0.8
+      [info] naive=0.80, realistic=0.8902  <- fake edge correctly detected
+
+=== cross-venue: large skew flagged as unreliable ===
+  ok  skew_ms: 500.0
+  ok  skew_unreliable: True
+
+=== cross-venue: oracle haircut subtracts from edge (conservative) ===
+  ok  oracle_haircut_usd > 0: True
+      [info] haircut=$0.5000 (0.5% conservative)
+
+----
+  passed: 18
+  failed: 0
+[entrypoint] running initial discovery
+[discover] start 2026-05-25T00:23:19.933783+00:00
+[discover] fetching Limitless active markets...
+[discover] fetching Polymarket active markets...
+  got 100 raw entries
+  normalized: 2  (skipped 98 no-asset)
+  got 25 raw entries
+  normalized: 18  (skipped 7 no-asset, 0 no-orderbook)
+[discover] done in 0.2s
+  Limitless YES+NO candidates: 18
+  Polymarket YES+NO candidates: 0
+  Cross-venue pairs: 0
+  output: /app/data/pairs.json
+[entrypoint] starting hourly discovery refresh loop in background
+[entrypoint] starting logger loop
+[logger] running self-test...
+
+=== walk_asks: single level, partial fill ===
+  ok  filled_shares: 200.0
+  ok  avg_price: 0.5
+  ok  depth_exhausted: False
+
+=== walk_asks: walks through two levels, weighted average ===
+  ok  filled_shares: 220.0
+  ok  filled_usd: 100.0
+  ok  avg_price: 0.45454545454545453
+  ok  depth_exhausted: False
+
+=== walk_asks: depth exhausted, flagged ===
+  ok  filled_shares: 100.0
+  ok  filled_usd: 40.0
+  ok  avg_price: 0.4
+  ok  depth_exhausted: True
+
+=== walk_asks: empty book ===
+  ok  filled_shares: 0.0
+  ok  avg_price: None
+  ok  depth_exhausted: True
+
+=== walk_asks: rejects unsorted input (catches programmer error) ===
+  ok  raised ValueError on misordered input
+
+=== walk_bids: descending, partial fill ===
+  ok  filled_shares: 190.0
+  ok  filled_usd: 100.0
+  ok  avg_price: 0.5263157894736842
+
+=== walk_asks: skips zero-price and zero-size levels (defensive) ===
+  ok  filled_shares: 200.0
+  ok  avg_price: 0.5
+
+=== limitless fee: prefers market metadata over fallback curve ===
+  ok  fee_usd: 1.0
+
+=== limitless fallback: buy fee peaks at p=0.50 -> ~3.00% of notional ===
+  ok  fee_usd (peak): 3.0
+
+=== limitless fallback: buy fee at edge p=0.01 -> ~0.40% ===
+  ok  fee_usd (edge): 0.45199999999999996
+
+=== polymarket fee: uses fd.rate if provided ===
+  ok  fee_usd: 0.375
+
+=== polymarket fee: fallback to crypto category (0.072 rate) ===
+  ok  fee_usd: 0.8999999999999999
+
+=== yes+no: NO edge when realistic sum_asks > 1.00 ===
+  ok  realistic_sum_avg_asks: 1.1
+  ok  net_edge_usd negative: True
+  ok  depth_ok: True
+
+=== yes+no: CLEAR edge when realistic sum_asks << 1.00 ===
+  ok  realistic_sum_avg_asks: 0.8
+  ok  net_edge_usd positive: True
+      [info] net_edge_usd = 22.5200, fees = 2.4800
+
+=== yes+no: depth exhausted on one side -> depth_ok=False ===
+  ok  yes_walk depth_exhausted: True
+  ok  depth_ok: False
+  ok  net_edge_usd is computed: True
+
+=== yes+no: walked avg price > top-of-book when book is layered (fake edge detection) ===
+  ok  naive_sum_top_asks: 0.8
+      [info] naive=0.80, realistic=0.8902  <- fake edge correctly detected
+
+=== cross-venue: large skew flagged as unreliable ===
+  ok  skew_ms: 500.0
+  ok  skew_unreliable: True
+
+=== cross-venue: oracle haircut subtracts from edge (conservative) ===
+  ok  oracle_haircut_usd > 0: True
+      [info] haircut=$0.5000 (0.5% conservative)
+
+----
+  passed: 18
+  failed: 0
+[logger] self-test passed; starting observation loop
+[logger] reloaded pairs: lim_yes_no=18, poly_yes_no=0, cross=0
+[logger] cycle done: 18 markets observed in 0.6s, 0 errors, db=40 KB
+[logger] cycle done: 18 markets observed in 0.3s, 0 errors, db=56 KB
+[logger] cycle done: 18 markets observed in 0.4s, 0 errors, db=80 KB
