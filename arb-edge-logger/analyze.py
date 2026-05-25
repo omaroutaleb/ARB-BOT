@@ -52,6 +52,25 @@ def report_yesno(conn, min_obs: int, only_size: float | None) -> None:
     print(f"Venues:       {row['venues']}")
     print(f"Time range:   {row['first']}  to  {row['last']}")
 
+    # Polymarket intra-venue YES/NO skew (Limitless has no skew by construction)
+    skew = conn.execute(
+        """SELECT
+               SUM(CASE WHEN intra_skew_unreliable = 0 THEN 1 ELSE 0 END) AS reliable,
+               SUM(CASE WHEN intra_skew_unreliable = 1 THEN 1 ELSE 0 END) AS unreliable,
+               AVG(intra_skew_ms) AS avg_skew,
+               MAX(intra_skew_ms) AS max_skew
+           FROM yes_no_observations
+          WHERE venue = 'polymarket' AND intra_skew_ms IS NOT NULL"""
+    ).fetchone()
+    if skew and (skew["reliable"] or 0) + (skew["unreliable"] or 0) > 0:
+        total = (skew["reliable"] or 0) + (skew["unreliable"] or 0)
+        pct_ok = 100.0 * (skew["reliable"] or 0) / total
+        print(f"\nPolymarket YES/NO fetch skew (2 HTTP calls per market):")
+        print(f"  Reliable (<100ms):   {skew['reliable']:,} ({pct_ok:.1f}%)")
+        print(f"  Unreliable (>100ms): {skew['unreliable']:,} ({100-pct_ok:.1f}%)")
+        print(f"  Avg skew: {skew['avg_skew'] or 0:.1f}ms   Max: {skew['max_skew'] or 0:.1f}ms")
+        print(f"  (Limitless intra-skew is 0 by construction -- NO derived from YES)")
+
     # Size breakdown
     print("\n--- Realistic edge (walked depth, fees included) ---")
     print(f"{'Size':>8}  {'Total Obs':>10}  {'Net>0 count':>12}  {'Net>0 %':>9}  "

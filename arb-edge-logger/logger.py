@@ -65,6 +65,10 @@ CREATE TABLE IF NOT EXISTS yes_no_observations (
     market_key TEXT NOT NULL,
     raw_title TEXT,
     response_age_ms REAL,
+    yes_response_ts_ns INTEGER,         -- when the YES book landed (Polymarket only — Limitless has 1 fetch)
+    no_response_ts_ns INTEGER,          -- when the NO book landed (Polymarket only)
+    intra_skew_ms REAL,                 -- |yes_ts - no_ts| in ms; NULL/0 for Limitless (derived NO has no skew)
+    intra_skew_unreliable INTEGER,      -- 1 if intra_skew_ms > SKEW_RELIABLE_THRESHOLD_MS
     size_usd REAL NOT NULL,
     naive_sum_top_asks REAL,
     realistic_sum_avg_asks REAL,
@@ -303,16 +307,22 @@ async def observe_limitless_yes_no(session, market: dict, conn: sqlite3.Connecti
         conn.execute(
             """INSERT INTO yes_no_observations (
                 observed_at_utc, observed_ts_ns, venue, asset, duration_class,
-                market_key, raw_title, response_age_ms, size_usd,
+                market_key, raw_title, response_age_ms,
+                yes_response_ts_ns, no_response_ts_ns, intra_skew_ms, intra_skew_unreliable,
+                size_usd,
                 naive_sum_top_asks, realistic_sum_avg_asks,
                 yes_avg_price, no_avg_price, yes_filled_shares, no_filled_shares,
                 yes_depth_exhausted, no_depth_exhausted, depth_ok,
                 fees_yes_usd, fees_no_usd, fees_source,
                 gross_edge_usd, net_edge_usd, edge_per_share_usd
-            ) VALUES (?, ?, ?, ?, ?,  ?, ?, ?, ?,  ?, ?,  ?, ?, ?, ?,  ?, ?, ?,  ?, ?, ?,  ?, ?, ?)""",
+            ) VALUES (?, ?, ?, ?, ?,  ?, ?, ?,  ?, ?, ?, ?,  ?,  ?, ?,  ?, ?, ?, ?,  ?, ?, ?,  ?, ?, ?,  ?, ?, ?)""",
             (
                 now_iso, ts_ns, "limitless", market.get("asset"), market.get("duration_class"),
-                slug, market.get("raw_title"), age_ms, size,
+                slug, market.get("raw_title"), age_ms,
+                # Limitless: NO is derived mathematically from YES (CTF complement),
+                # no second fetch, no possible skew. Record yes_ts; intra-skew = 0.
+                ts_ns, ts_ns, 0.0, 0,
+                size,
                 obs.naive_sum_top_asks, obs.realistic_sum_avg_asks,
                 obs.yes_walk.avg_price, obs.no_walk.avg_price,
                 obs.yes_walk.filled_shares, obs.no_walk.filled_shares,
@@ -340,6 +350,8 @@ async def observe_polymarket_yes_no(session, market: dict, conn: sqlite3.Connect
     if not yes_asks or not no_asks:
         return
     ts_ns = max(yes_ts, no_ts)
+    intra_skew_ms = abs(yes_ts - no_ts) / 1_000_000.0
+    intra_unreliable = intra_skew_ms > SKEW_RELIABLE_THRESHOLD_MS
     age_ms = None
 
     now_iso = datetime.now(tz=timezone.utc).isoformat()
@@ -355,16 +367,20 @@ async def observe_polymarket_yes_no(session, market: dict, conn: sqlite3.Connect
         conn.execute(
             """INSERT INTO yes_no_observations (
                 observed_at_utc, observed_ts_ns, venue, asset, duration_class,
-                market_key, raw_title, response_age_ms, size_usd,
+                market_key, raw_title, response_age_ms,
+                yes_response_ts_ns, no_response_ts_ns, intra_skew_ms, intra_skew_unreliable,
+                size_usd,
                 naive_sum_top_asks, realistic_sum_avg_asks,
                 yes_avg_price, no_avg_price, yes_filled_shares, no_filled_shares,
                 yes_depth_exhausted, no_depth_exhausted, depth_ok,
                 fees_yes_usd, fees_no_usd, fees_source,
                 gross_edge_usd, net_edge_usd, edge_per_share_usd
-            ) VALUES (?, ?, ?, ?, ?,  ?, ?, ?, ?,  ?, ?,  ?, ?, ?, ?,  ?, ?, ?,  ?, ?, ?,  ?, ?, ?)""",
+            ) VALUES (?, ?, ?, ?, ?,  ?, ?, ?,  ?, ?, ?, ?,  ?,  ?, ?,  ?, ?, ?, ?,  ?, ?, ?,  ?, ?, ?,  ?, ?, ?)""",
             (
                 now_iso, ts_ns, "polymarket", market.get("asset"), market.get("duration_class"),
-                market.get("slug"), market.get("raw_title"), age_ms, size,
+                market.get("slug"), market.get("raw_title"), age_ms,
+                yes_ts, no_ts, intra_skew_ms, int(intra_unreliable),
+                size,
                 obs.naive_sum_top_asks, obs.realistic_sum_avg_asks,
                 obs.yes_walk.avg_price, obs.no_walk.avg_price,
                 obs.yes_walk.filled_shares, obs.no_walk.filled_shares,
