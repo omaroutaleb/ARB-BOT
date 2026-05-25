@@ -1,0 +1,18 @@
+services:
+  arb-edge-logger:
+    build: .
+    image: arb-edge-logger:latest
+    container_name: arb-edge-logger
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data        # SQLite + pairs.json live here on host
+    environment:
+      LOGGER_POLL_INTERVAL_SEC: "30"
+      DISCOVERY_REFRESH_SEC: "3600"
+      SIZE_LADDER_USD: "25,100,500,1000"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    stop_grace_period: 5s
