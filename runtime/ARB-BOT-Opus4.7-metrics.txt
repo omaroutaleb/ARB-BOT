@@ -1,8 +1,8 @@
 # HELP python_gc_objects_collected_total Objects collected during gc
 # TYPE python_gc_objects_collected_total counter
-python_gc_objects_collected_total{generation="0"} 2116.0
-python_gc_objects_collected_total{generation="1"} 17090.0
-python_gc_objects_collected_total{generation="2"} 3152.0
+python_gc_objects_collected_total{generation="0"} 2147.0
+python_gc_objects_collected_total{generation="1"} 17435.0
+python_gc_objects_collected_total{generation="2"} 3422.0
 # HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
 # TYPE python_gc_objects_uncollectable_total counter
 python_gc_objects_uncollectable_total{generation="0"} 0.0
@@ -10,9 +10,9 @@ python_gc_objects_uncollectable_total{generation="1"} 0.0
 python_gc_objects_uncollectable_total{generation="2"} 0.0
 # HELP python_gc_collections_total Number of times this generation was collected
 # TYPE python_gc_collections_total counter
-python_gc_collections_total{generation="0"} 7491.0
-python_gc_collections_total{generation="1"} 681.0
-python_gc_collections_total{generation="2"} 14.0
+python_gc_collections_total{generation="0"} 7646.0
+python_gc_collections_total{generation="1"} 695.0
+python_gc_collections_total{generation="2"} 15.0
 # HELP python_info Python platform information
 # TYPE python_info gauge
 python_info{implementation="CPython",major="3",minor="11",patchlevel="15",version="3.11.15"} 1.0
@@ -27,7 +27,7 @@ process_resident_memory_bytes 6.5994752e+07
 process_start_time_seconds 1.77958327362e+09
 # HELP process_cpu_seconds_total Total user and system CPU time spent in seconds.
 # TYPE process_cpu_seconds_total counter
-process_cpu_seconds_total 256.71
+process_cpu_seconds_total 262.12
 # HELP process_open_fds Number of open file descriptors.
 # TYPE process_open_fds gauge
 process_open_fds 10.0
