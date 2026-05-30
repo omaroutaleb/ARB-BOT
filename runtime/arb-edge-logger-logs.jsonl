@@ -1,136 +1,3 @@
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72204 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72204 KB
-[refresh] running discovery
-[discover] start 2026-05-30T06:33:28.796275+00:00
-[discover] fetching Limitless active markets...
-[discover] fetching Polymarket active markets...
-  got 100 raw entries
-  normalized: 1  (skipped 99 no-asset)
-  got 25 raw entries
-  normalized: 20  (skipped 5 no-asset, 2 no-orderbook)
-[discover] done in 0.2s
-  Limitless YES+NO candidates: 18
-  Polymarket YES+NO candidates: 0
-  Cross-venue pairs: 0
-  output: /app/data/pairs.json
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72208 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72208 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72212 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72212 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72216 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72216 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72220 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72220 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72224 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72224 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72228 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72228 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72232 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72232 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72232 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72236 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72236 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72240 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72240 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72244 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72244 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72248 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72248 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72252 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72252 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72256 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72256 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72260 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72260 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72264 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72264 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72268 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72268 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72272 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72272 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72276 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72276 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72280 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72280 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72284 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72284 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72288 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72288 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72292 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72292 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72296 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72296 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72300 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72300 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72304 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72304 KB
-[logger] reloaded pairs: lim_yes_no=18, poly_yes_no=0, cross=0
-[logger] cycle done: 18 markets observed in 0.3s, 0 errors, db=72304 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72316 KB
-[logger] cycle done: 18 markets observed in 0.3s, 0 errors, db=72324 KB
-[logger] cycle done: 18 markets observed in 0.5s, 0 errors, db=72332 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72332 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72336 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72336 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72340 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72340 KB
-[logger] cycle done: 18 markets observed in 1.0s, 0 errors, db=72344 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72344 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72344 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72348 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72348 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72352 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72352 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72356 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72356 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72360 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72360 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72364 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72364 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72368 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72368 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72372 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72372 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72376 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72376 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72380 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72380 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72384 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72384 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72388 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72388 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72392 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72392 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72396 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72396 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72400 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72400 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72404 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72404 KB
-[logger] cycle done: 18 markets observed in 0.5s, 0 errors, db=72408 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72408 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72412 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72412 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72416 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72416 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72416 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72420 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72420 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72424 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72424 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72428 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72428 KB
-[logger] cycle done: 18 markets observed in 0.4s, 0 errors, db=72432 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72432 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72436 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72436 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72440 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72440 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72444 KB
-[logger] cycle done: 18 markets observed in 0.4s, 0 errors, db=72444 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72448 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72448 KB
-[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72452 KB
 [logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72452 KB
 [logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=72456 KB
 [refresh] running discovery
@@ -998,3 +865,136 @@
 [logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73972 KB
 [logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73976 KB
 [logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73976 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73980 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73980 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73984 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73984 KB
+[logger] reloaded pairs: lim_yes_no=18, poly_yes_no=0, cross=0
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73988 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73988 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73992 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73992 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73996 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=73996 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74000 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74000 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74004 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74004 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74008 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74008 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74012 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74012 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74016 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74016 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74020 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74020 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74024 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74024 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74028 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74028 KB
+[logger] cycle done: 18 markets observed in 0.4s, 0 errors, db=74032 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74032 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74036 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74036 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74036 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74040 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74040 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74044 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74044 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74048 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74048 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74052 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74052 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74056 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74056 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74060 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74060 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74064 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74064 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74068 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74068 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74072 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74072 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74076 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74076 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74080 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74080 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74084 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74084 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74088 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74088 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74092 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74092 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74096 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74096 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74100 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74100 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74104 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74104 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74108 KB
+[refresh] running discovery
+[discover] start 2026-05-30T14:33:34.767457+00:00
+[discover] fetching Limitless active markets...
+[discover] fetching Polymarket active markets...
+  got 25 raw entries
+  normalized: 21  (skipped 4 no-asset, 3 no-orderbook)
+  got 100 raw entries
+  normalized: 1  (skipped 99 no-asset)
+[discover] done in 0.2s
+  Limitless YES+NO candidates: 18
+  Polymarket YES+NO candidates: 0
+  Cross-venue pairs: 0
+  output: /app/data/pairs.json
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74108 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74108 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74112 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74112 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74116 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74116 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74124 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74124 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74128 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74128 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74132 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74132 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74136 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74136 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74140 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74140 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74144 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74144 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74148 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74148 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74152 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74152 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74156 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74156 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74160 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74160 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74164 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74164 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74168 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74168 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74172 KB
+[logger] cycle done: 18 markets observed in 0.6s, 0 errors, db=74172 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74176 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74176 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74180 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74180 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74184 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74184 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74184 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74188 KB
+[logger] cycle done: 18 markets observed in 0.5s, 0 errors, db=74188 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74192 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74192 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74196 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74196 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74200 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74200 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74204 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74204 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74208 KB
+[logger] cycle done: 18 markets observed in 0.5s, 0 errors, db=74208 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74212 KB
+[logger] cycle done: 18 markets observed in 0.2s, 0 errors, db=74212 KB
